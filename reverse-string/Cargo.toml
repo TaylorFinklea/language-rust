@@ -5,6 +5,9 @@ unicode-segmentation = "1.10.1"
 grapheme = []
 
 [package]
-edition = "2021"
+edition = "2024"
 name = "reverse_string"
-version = "1.2.0"
+version = "1.0.0"
+
+[author]
+name = "Taylor Finklea"
