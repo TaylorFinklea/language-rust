@@ -1,12 +1,5 @@
-use std::fmt
+use std::fmt;
 
-struct Structure;
-// 
-impl fmt::Display for Structure {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}", self)
-    }
-}
 
 fn main() {
     // Prints to the console io::stdout
@@ -65,6 +58,12 @@ fn main() {
 
     #[allow(dead_code)] // disable `dead_code` which warn against unused module
     struct Structure(i32);
+        
+    impl fmt::Display for Structure {
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            write!(f, "{}", self.0);
+        }
+    }
 
     // This will not compile because `Structure` does not implement
     // fmt::Display.
